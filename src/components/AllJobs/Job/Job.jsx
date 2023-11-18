@@ -21,7 +21,7 @@ const Job = ({ job }) => {
                 <p className='flex mr-4'><img src={LocationIcon} alt="" /> <span className='text-my-black2 ms-2'>{location}</span></p>
                 <p className='flex'><img src={SalaryIcon} alt="" /> <span className='text-my-black2 ms-2'>{salary}</span></p>
             </div>
-            <Link to='' className="py-2 px-4 inline-block my-4 text-my-white  bg-gradient-to-r from-my-blue1 to-my-blue2 rounded-md shadow">
+            <Link to={`/job/${id}`}   className="py-2 px-4 inline-block my-4 text-my-white  bg-gradient-to-r from-my-blue1 to-my-blue2 rounded-md shadow">
                 View Details
             </Link>
 

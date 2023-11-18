@@ -1,10 +1,14 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Job from './Job/Job';
 
 const AllJobs = () => {
-    const jobs = useLoaderData();
-    console.log(jobs);
+    const [jobs, setJobs] = useState([]);
+
+    useEffect(()=>{
+        fetch('jobs.json')
+        .then(res=>res.json())
+        .then(data=>setJobs(data))
+    },[])
     return (
         <section className="mt-12 mb-8 mx-auto px-4 max-w-screen-xl md:px-8">
         <div className="text-center">

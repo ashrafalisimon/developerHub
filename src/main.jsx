@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import AllJobs from './components/AllJobs/AllJobs.jsx'
 import HomePage from './components/HomePage/HomePage.jsx'
+import JobsDetails from './components/JobDetails/JobsDetails.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -28,9 +29,13 @@ const router = createBrowserRouter([
         element: <h1>This is Blog Pages</h1>
       },
       {
-        path:'jobs',
+        path:'/jobs',
         element: <AllJobs></AllJobs>,
-        loader: ()=> fetch('jobs.json')
+      },
+      {
+        path: '/job/:id',
+        element:<JobsDetails/>, 
+        loader: () => fetch('jobs.json') // do not load all data. load only what you need
       }
     ]
   }
