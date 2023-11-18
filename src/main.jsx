@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import AllJobs from './components/AllJobs/AllJobs.jsx'
+import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import HomePage from './components/HomePage/HomePage.jsx'
 import JobsDetails from './components/JobDetails/JobsDetails.jsx'
 import './index.css'
+
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,9 @@ const router = createBrowserRouter([
         element: <h1>This is Statistics Pages</h1>
       },
       {
-        path: 'appliedJobs',
-        element: <h1>This is Applied Jobs Pages</h1>
+        path: '/appliedJobs',
+        element: <AppliedJobs/>,
+        loader: () => fetch('jobs.json')
       },
       {
         path: 'blog',
@@ -35,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/job/:id',
         element:<JobsDetails/>, 
-        loader: () => fetch('jobs.json') // do not load all data. load only what you need
+        loader: () => fetch('jobs.json') 
       }
     ]
   }
