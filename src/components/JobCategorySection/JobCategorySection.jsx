@@ -5,6 +5,7 @@ import CrativeIcon from '../../assets/icons/creative.png';
 import MarketingIcon from '../../assets/icons/marketing.png';
 
 const JobCategorySection = () => {
+
     const features = [
         {
             icon:`${AccountIcon}`,

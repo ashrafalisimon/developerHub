@@ -54,8 +54,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="hidden md:inline-block">
-                    <Link to='' className="py-3 px-4 text-my-white  bg-gradient-to-r from-my-blue1 to-my-blue2 rounded-md shadow">
-                    Star Applying
+                    <Link to='/jobs' className="py-3 px-4 text-my-white  bg-gradient-to-r from-my-blue1 to-my-blue2 rounded-md shadow">
+                    Start Applying
                     </Link>
                 </div>
             </div>
