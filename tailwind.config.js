@@ -12,6 +12,8 @@ export default {
       'my-black2': '#757575',
       'my-light-blue1': 'rgba(126, 144, 254, 0.05)',
       'my-light-blue2': 'rgba(152, 115, 255, 0.05) ',
+      'my-light-blue3': 'rgba(126, 144, 254, 0.10)',
+      'my-light-blue4': 'rgba(152, 115, 255, 0.10) ',
       'my-light-white': 'rgba(255, 255, 255, 0.70)',
       'my-light-white40': 'rgba(255, 255, 255, 0.40)',
       'my-white': '#FFF',
@@ -20,6 +22,9 @@ export default {
   },
   plugins: [],
 }
+
+// linear-gradient(90deg, rgba(126, 144, 254, 0.10) 0%, rgba(152, 115, 255, 0.10) 100%);
+
 
 // linear-gradient(90deg,  0%, rgba(152, 115, 255, 0.05) 100%)
 // linear-gradient(90deg, #7E90FE 0%, #9873FF 100%)
